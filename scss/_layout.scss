@@ -7,11 +7,16 @@
   background-size: cover;
 
   .brand {
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, 50%);
     display: flex;
     align-items: center;
+    @include centering(0%); //15%
+    // border: 1px solid orange;
+  }
+
+  &-banner {
+    // header-banner
+    text-align: center;
+    @include centering(12%); //50%
+    // border: 1px solid red;
   }
 }
