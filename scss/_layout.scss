@@ -21,45 +21,66 @@
         display: none;
       }
 
-      .left-img {
-        width: 50%;
+      .navbar-card {
         position: absolute;
         box-shadow: 0 15px 60px rgba($color-black, 0.4);
-        opacity: 0.7;
+        opacity: 0.9;
         border-radius: 10px;
 
-        @media (max-width: 1300px) {
-          width: 55%;
-        }
+        height: 200px;
+        width: 50%;
+        margin: 0 auto;
+        overflow: hidden;
 
         @media (max-width: 1000px) {
-          width: 65%;
+          height: 150px;
         }
       }
 
-      .left-img-1 {
+      .navbar-card-1 {
         top: 15%;
         left: 15%;
 
         @media (max-width: 1000px) {
-          left: 5%;
+          top: 20%;
         }
       }
-      .left-img-2 {
+
+      .navbar-card-2 {
         top: 35%;
         left: 25%;
 
         @media (max-width: 1000px) {
-          left: 15%;
+          top: 35%;
         }
       }
-      .left-img-3 {
+
+      .navbar-card-3 {
         top: 55%;
         left: 35%;
 
         @media (max-width: 1000px) {
-          left: 25%;
+          top: 50%;
         }
+      }
+
+      .left-img {
+        background-size: cover;
+        top: 50%;
+        width: 100%;
+      }
+
+      .left-img-1 {
+        transform: translateY(-35%);
+      }
+
+      .left-img-2 {
+        transform: translateY(-15%);
+        background-size: cover;
+      }
+
+      .left-img-3 {
+        transform: translateY(-35%);
       }
     }
 
@@ -123,9 +144,11 @@
 .checkbox:checked ~ .hamburger-menu .menu-line-1 {
   transform: rotateZ(-40deg);
 }
+
 .checkbox:checked ~ .hamburger-menu .menu-line-2 {
   opacity: 0;
 }
+
 .checkbox:checked ~ .hamburger-menu .menu-line-3 {
   transform: rotateZ(40deg);
 }
@@ -135,25 +158,22 @@
   height: 100vh;
   position: relative;
   background: linear-gradient(rgba($color-black, 0.8), rgba($color-black, 0.6)),
-    url(../images/bg.jpeg) center no-repeat;
+    url(../images/bg.jpg) center no-repeat;
   background-size: cover;
 
   .brand {
     display: flex;
     align-items: center;
-    @include centering(0%); //15%
-    // border: 1px solid orange;
+    @include centering(0%);
 
     @media (max-width: 500px) {
-      @include centering(5%); //15%
+      @include centering(5%);
     }
   }
 
   &-banner {
-    // header-banner
     text-align: center;
-    @include centering(12%); //50%
-    // border: 1px solid red;
+    @include centering(12%);
   }
 }
 
@@ -311,12 +331,13 @@
     font-family: $font-josefinSans;
     font-size: 18px;
     color: $color-secondary;
+    margin: auto;
+    text-align: center;
+
     @include textStyles(capitalize);
 
     @media (max-width: 800px) {
       width: 70%;
-      margin: auto;
-      text-align: center;
     }
 
     @media (max-width: 500px) {

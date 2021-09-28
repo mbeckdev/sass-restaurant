@@ -27,36 +27,47 @@ body {
       @media (max-width: 800px) {
         .navbar-navigation-left {
           display: none; } }
-      .navbar-navigation-left .left-img {
-        width: 50%;
+      .navbar-navigation-left .navbar-card {
         position: absolute;
         box-shadow: 0 15px 60px rgba(0, 0, 0, 0.4);
-        opacity: 0.7;
-        border-radius: 10px; }
-        @media (max-width: 1300px) {
-          .navbar-navigation-left .left-img {
-            width: 55%; } }
+        opacity: 0.9;
+        border-radius: 10px;
+        height: 200px;
+        width: 50%;
+        margin: 0 auto;
+        overflow: hidden; }
         @media (max-width: 1000px) {
-          .navbar-navigation-left .left-img {
-            width: 65%; } }
-      .navbar-navigation-left .left-img-1 {
+          .navbar-navigation-left .navbar-card {
+            height: 150px; } }
+      .navbar-navigation-left .navbar-card-1 {
         top: 15%;
         left: 15%; }
         @media (max-width: 1000px) {
-          .navbar-navigation-left .left-img-1 {
-            left: 5%; } }
-      .navbar-navigation-left .left-img-2 {
+          .navbar-navigation-left .navbar-card-1 {
+            top: 20%; } }
+      .navbar-navigation-left .navbar-card-2 {
         top: 35%;
         left: 25%; }
         @media (max-width: 1000px) {
-          .navbar-navigation-left .left-img-2 {
-            left: 15%; } }
-      .navbar-navigation-left .left-img-3 {
+          .navbar-navigation-left .navbar-card-2 {
+            top: 35%; } }
+      .navbar-navigation-left .navbar-card-3 {
         top: 55%;
         left: 35%; }
         @media (max-width: 1000px) {
-          .navbar-navigation-left .left-img-3 {
-            left: 25%; } }
+          .navbar-navigation-left .navbar-card-3 {
+            top: 50%; } }
+      .navbar-navigation-left .left-img {
+        background-size: cover;
+        top: 50%;
+        width: 100%; }
+      .navbar-navigation-left .left-img-1 {
+        transform: translateY(-35%); }
+      .navbar-navigation-left .left-img-2 {
+        transform: translateY(-15%);
+        background-size: cover; }
+      .navbar-navigation-left .left-img-3 {
+        transform: translateY(-35%); }
     .navbar-navigation-right {
       width: 50vw;
       height: 100vh;
@@ -114,7 +125,7 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../images/bg.jpeg) center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../images/bg.jpg) center no-repeat;
   background-size: cover; }
   .header .brand {
     display: flex;
@@ -247,14 +258,14 @@ body {
     font-family: "Josefin Sans", sans-serif;
     font-size: 18px;
     color: #bbb;
+    margin: auto;
+    text-align: center;
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: capitalize; }
     @media (max-width: 800px) {
       .footer-copyright-paragraph {
-        width: 70%;
-        margin: auto;
-        text-align: center; } }
+        width: 70%; } }
     @media (max-width: 500px) {
       .footer-copyright-paragraph {
         font-size: 14px; } }
